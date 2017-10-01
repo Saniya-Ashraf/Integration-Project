@@ -2,8 +2,8 @@ package integrationProject;
 
 public class Calculator {
 	
-	public void calcAreaRect(int length, int width) {
-		int area = length * width;
+	public void calcAreaRect(double length, double width) {
+		double area = length * width;
 		System.out.println("the area of a rectangle is: " + area);
 	}
 	

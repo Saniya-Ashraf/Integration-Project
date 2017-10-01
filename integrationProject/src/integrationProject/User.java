@@ -15,12 +15,9 @@ public class User {
 		name = n;
 	}
 	
-	public User() {
-		name = null;
-		age = 0;
-	}
+
 	public void setAge(int a) {
-		if(a<0)
+		if(a>0)
 			age = a;
 		else
 			System.out.println("Invalid Age");
