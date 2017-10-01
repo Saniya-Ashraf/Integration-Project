@@ -15,7 +15,7 @@ public class Program {
 		System.out.print("please Enter your name: ");
 		String username = in.nextLine();
 		boolean flag2 = true; //for first while
-	User user1 = new User(username);
+	User user1 = new User(username); //creating an object with a constructor
  while(flag2) {
 		System.out.println("Hello " + username + "\n Welcome to your dashboard"
 				+ "\nEnter the number for what you want to do");
@@ -30,7 +30,7 @@ public class Program {
 		char temp; // used in switch  
 		switch(choice) { //switch 1 main switch statement
 		case 1:
-			demonstrateIntDiv();
+			demonstrateIntDiv(); // this is a method call to a static method in the same class with no arguments
 			System.out.println("Do you wanna head back? (y/n)? ");
 			 temp = in.next().charAt(0);
 			if(temp=='n' || temp=='n')
@@ -116,27 +116,42 @@ public class Program {
 				double e2 = in.nextDouble();
 				c1.calcAreaRect(e1,e2);
 				break;
+			case 6:
+				int amount;
+				double rate;
+				int year;
+				System.out.print("Enter the amount paid: ");
+				amount = in.nextInt();
+				System.out.print("Enter the rate: ");
+				rate = in.nextDouble();
+				System.out.print("Enter the years: ");
+				year = in.nextInt();
+				c1.CalcInterest(amount, rate, year); //this is a method call with 3 arguments to another class's method
+				System.out.println("Do you wanna do more calculations or head back? (y/n)? ");
+				char c = in.next().charAt(0);
+				
+				if(c=='y' || c=='Y')
+					flag = false;
+				}	
+				}while(!flag);
 			}
-			System.out.println("Do you wanna do more calculations or head back? (y/n)? ");
-			char c = in.next().charAt(0);
-			
-			if(c=='y' || c=='Y')
-				flag = false;
-			
-		}while(!flag);
-		break;
 		}
- }
+		
+				
+			
+			
+		
+		
+ 
  System.out.println(" Thank you for using This application have a nice Day!");
 	}
 	
-	public static void demonstrateIntDiv() {
-	
+	public static void demonstrateIntDiv() { //this is a header with no paramenters
 	
 		System.out.println("Enter the first integer");
 		int int1 = in.nextInt();
 		System.out.println("Enter the Second integer");
-		int int2 = in.nextInt();
+		int int2 = in.nextInt(); //nextInt() is a method call to a predefined method
 		int intResult = int1/int2;
 		double res = (double)int1/int2;
 		System.out.printf("\n\n\nThe values you enter are %d and %d\n But a Funny part is"

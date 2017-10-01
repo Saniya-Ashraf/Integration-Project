@@ -1,17 +1,31 @@
-// author Saniya Ashraf
+// @author Saniya Ashraf
+
+// a variable is code
+// it is a virtual container in the memory that can
+//hold a value of a certain type.
+// there are 8 primitive datatypes
+/* boolean its either true or false
+ * byte - its a two's complement integer value of 8 bits
+ * char - is any single unicode character
+ * short - twos complement integer of 16 bits
+ * int - twos complement integer of 32 bits
+ * long - twos complement integer of 64 bits
+ * float - is a floating point of 32 bits
+ * double - floating point of 64 bits
+ */
 package integrationProject;
 
 public class User {
 	private String name;
 	private	int age;
 
-	public User(String n, int a) {
+	public User(String n, int a) { //constructor 
 		name = n;
 		age = a;
 	}
 	
 	
-	public User(String n) {
+	public User(String n) { //constructor 
 		name = n;
 	}
 	
