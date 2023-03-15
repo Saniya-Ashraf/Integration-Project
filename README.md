@@ -1,2 +1,2 @@
 # Integration-Project
-Project for class
+Project for class COP 
